@@ -29,10 +29,24 @@
     </div>
   </form>
 
-  <button class="getData">Get Data</button>
-  
-  <div class="output"></div>
-  <div class="message"></div>
+  <h2>查詢留言 Search Comment</h2>
+
+  <form class="editDataForm">
+    <div>
+      <label for="editName">Name:</label>
+      <input type="text" class="editName" id="editName" name="editName" required>
+    </div>
+    <div>
+      <label for="editEmail">Email:</label>
+      <input type="email" class="editEmail" id="editEmail" name="editEmail" required>
+    </div>
+    <div>
+      <textarea rows="5" class="editComment" placeholder="Comment"></textarea>
+    </div>
+    <div>
+      <button class="getData">Get Data</button>
+    </div>
+  </form>
 
   <script src="js/all.js"></script>
 </body>

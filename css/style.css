@@ -16,35 +16,41 @@ h2 {
   font-weight: 900;
   color: #FFFFFF;
   text-align: center;
-  margin: 1.5rem 0 0.5rem;
+  margin: 2.5rem 0 1.5rem;
 }
 
-.addDataForm {
-  max-width: 300px;
+.addDataForm,
+.editDataForm {
+  max-width: 350px;
   margin: 0 auto 2.5rem;
 }
 
-.addDataForm div {
+.addDataForm div,
+.editDataForm div {
   margin: 1rem auto;
 }
 
-.addDataForm label {
+.addDataForm label
+.editDataForm label {
   color: #FFFFFF;
 }
 
-.addDataForm input {
+.addDataForm input,
+.editDataForm input {
   width: 100%;
   box-sizing: border-box;
   margin: 0.25rem 0;
 }
 
-.addDataForm textarea {
+.addDataForm textarea,
+.editDataForm textarea {
   width: 100%;
   box-sizing: border-box;
   margin: 0.25rem 0;
 }
 
-.addDataForm button {
+.addDataForm button,
+.editDataForm button {
   width: 40%;
   color: #000000;
   background-color: #FFFFFF;
@@ -56,42 +62,14 @@ h2 {
   cursor: pointer;
 }
 
-.addDataForm button:hover {
+.addDataForm button:hover,
+.editDataForm button:hover {
   background-color: #F0F0F0;
   color: #000000;
 }
 
-.addDataForm button:active {
+.addDataForm button:active,
+.editDataForm button:active {
   background-color: #E0E0E0;
   transform: scale(0.9);
-}
-
-.getData {
-  width: 20%;
-  color: #000000;
-  background-color: #FFFFFF;
-  border: 2px solid #FFFFFF;
-  border-radius: 10px;
-  display: block;
-  margin: 1rem auto;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-.getData:hover {
-  background-color: #F0F0F0;
-  color: #000000;
-}
-
-.getData:active {
-  background-color: #E0E0E0;
-  transform: scale(0.9);
-}
-
-.output {
-  color: #FFFFFF;
-}
-
-.message {
-  color: #FFFFFF;
 }
