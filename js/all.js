@@ -10,14 +10,14 @@ form.addEventListener('submit', async (e) => {
   const comment = document.querySelector('.addComment').value;
 
   try {
-    const response = await fetch('/data', {
+    await fetch('/data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ name, email, comment })
     });
-
+    
     // 清空表單
     form.reset();
     alert('留言新增成功');
