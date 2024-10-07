@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 900;
   color: #FFFFFF;
   text-align: center;
@@ -12,39 +12,40 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 900;
   color: #FFFFFF;
   text-align: center;
   margin: 1.5rem 0 0.5rem;
 }
 
-.dataForm {
-  margin: 0 0 2.5rem;
+.addDataForm {
+  max-width: 300px;
+  margin: 0 auto 2.5rem;
 }
 
-.dataForm div {
+.addDataForm div {
   margin: 1rem auto;
 }
 
-.dataForm label {
+.addDataForm label {
   color: #FFFFFF;
 }
 
-.dataForm input {
+.addDataForm input {
   width: 100%;
   box-sizing: border-box;
   margin: 0.25rem 0;
 }
 
-.dataForm textarea {
+.addDataForm textarea {
   width: 100%;
   box-sizing: border-box;
   margin: 0.25rem 0;
 }
 
-.dataForm button {
-  width: 20%;
+.addDataForm button {
+  width: 40%;
   color: #000000;
   background-color: #FFFFFF;
   border: 2px solid #FFFFFF;
@@ -55,12 +56,12 @@ h2 {
   cursor: pointer;
 }
 
-.dataForm button:hover {
+.addDataForm button:hover {
   background-color: #F0F0F0;
   color: #000000;
 }
 
-.dataForm button:active {
+.addDataForm button:active {
   background-color: #E0E0E0;
   transform: scale(0.9);
 }
