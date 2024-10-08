@@ -47,6 +47,24 @@ app.post('/data', async (req, res) => {
   }
 });
 
+// API 路由：更新資料
+app.put('/data/:id', async (req, res) => {
+  const { id } = req.params;
+  const { name, email, comment } = req.body;
+
+  try {
+    const updatedData = await DataModel.findByIdAndUpdate(id, { name, email, comment }, { new: true });
+    
+    if (!updatedData) {
+      return res.status(404).json({ message: '資料未找到' });
+    }
+
+    res.status(200).json(updatedData);
+  } catch (err) {
+    res.status(500).json({ message: '伺服器錯誤' });
+  }
+});
+
 // 提供靜態資源
 app.use(express.static(path.join(__dirname))); // 提供根目錄的靜態文件
 
