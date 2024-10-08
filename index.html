@@ -8,21 +8,22 @@
   <title>Test Express and MongoDB</title>
 </head>
 <body>
-  <h1>測試 Express 和 MongoDB</h1>
+  <h1>Test Express and MongoDB</h1>
   
   <h2>聯絡我們 Contact Us</h2>
-
+  <p>請輸入想留下的名稱、Email 和留言</p>
+  <p>Please enter your name, Email, and message.</p>
   <form class="addDataForm">
     <div>
       <label for="addName">Name:</label>
-      <input type="text" class="addName" id="addName" name="addName" required>
+      <input type="text" class="addName" id="addName" name="addName" placeholder="名稱 Name" required>
     </div>
     <div>
       <label for="addEmail">Email:</label>
-      <input type="email" class="addEmail" id="addEmail" name="addEmail" required>
+      <input type="email" class="addEmail" id="addEmail" name="addEmail" placeholder="信箱 Email" required>
     </div>
     <div>
-      <textarea rows="5" class="addComment" placeholder="Comment"></textarea>
+      <textarea rows="5" class="addComment" placeholder="留言 Message"></textarea>
     </div>
     <div>
       <button type="submit">Submit</button>
@@ -30,21 +31,22 @@
   </form>
 
   <h2>查詢留言 Search Comment</h2>
-
+  <p>請輸入留言過的名稱和 Email</p>
+  <p>Please enter the name and Email you used to leave message.</p>
   <form class="editDataForm">
     <div>
       <label for="editName">Name:</label>
-      <input type="text" class="editName" id="editName" name="editName" required>
+      <input type="text" class="editName" id="editName" name="editName" placeholder="名稱 Name" required>
     </div>
     <div>
       <label for="editEmail">Email:</label>
-      <input type="email" class="editEmail" id="editEmail" name="editEmail" required>
+      <input type="email" class="editEmail" id="editEmail" name="editEmail" placeholder="信箱 Email" required>
     </div>
     <div>
-      <textarea rows="5" class="editComment" placeholder="Comment"></textarea>
+      <textarea rows="5" class="editComment" placeholder="留言 Message"></textarea>
     </div>
     <div>
-      <button class="getData">Get Data</button>
+      <button class="getData">Get Message</button>
     </div>
   </form>
 
