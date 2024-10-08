@@ -8,7 +8,12 @@ h1 {
   font-weight: 900;
   color: #FFFFFF;
   text-align: center;
-  margin: 2.5rem;
+  margin: 2.5rem 0;
+}
+
+.addFormBlock,
+.editFormBlock {
+  margin: 3rem auto;
 }
 
 h2 {
@@ -16,12 +21,14 @@ h2 {
   font-weight: 900;
   color: #FFFFFF;
   text-align: center;
-  margin: 2.5rem 0 1.5rem;
+  margin: 1.5rem;
 }
 
 p {
+  font-size: 14px;
   color: #FFFFFF;
   text-align: center;
+  margin: 0 0 0.5rem;
 }
 
 .addDataForm,
@@ -35,23 +42,18 @@ p {
   margin: 1rem auto;
 }
 
-.addDataForm label
-.editDataForm label {
-  color: #FFFFFF;
-}
-
 .addDataForm input,
 .editDataForm input {
   width: 100%;
   box-sizing: border-box;
-  margin: 0.25rem 0;
+  padding: 0.5rem;
 }
 
 .addDataForm textarea,
 .editDataForm textarea {
   width: 100%;
   box-sizing: border-box;
-  margin: 0.25rem 0;
+  padding: 0.5rem;
 }
 
 .addDataForm button,
@@ -62,7 +64,7 @@ p {
   border: 2px solid #FFFFFF;
   border-radius: 10px;
   display: block;
-  margin: 0.25rem auto;
+  margin: auto;
   padding: 0.5rem;
   cursor: pointer;
 }
