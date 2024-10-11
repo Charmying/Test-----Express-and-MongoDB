@@ -1,6 +1,8 @@
 const addForm = document.querySelector('.addDataForm');
 const editForm = document.querySelector('.editDataForm');
-const deleteButton = document.querySelector('.deleteData');
+const getDataButton = document.querySelector('.getData');
+const updateDataButton = document.querySelector('.updateData');
+const deleteDataButton = document.querySelector('.deleteData');
 let currentDataId = null;
 
 // 新增資料
@@ -43,7 +45,7 @@ addForm.addEventListener('submit', async (e) => {
 });
 
 // 獲取資料
-editForm.querySelector('.getData').addEventListener('click', async (e) => {
+getDataButton.addEventListener('click', async (e) => {
   e.preventDefault();
 
   const editName = document.querySelector('.editName').value.trim();
@@ -73,7 +75,7 @@ editForm.querySelector('.getData').addEventListener('click', async (e) => {
 });
 
 // 更新資料
-editForm.querySelector('.updateData').addEventListener('click', async (e) => {
+updateDataButton.addEventListener('click', async (e) => {
   e.preventDefault();
 
   if (!currentDataId) {
@@ -104,7 +106,7 @@ editForm.querySelector('.updateData').addEventListener('click', async (e) => {
 });
 
 // 刪除資料
-deleteButton.addEventListener('click', async (e) => {
+deleteDataButton.addEventListener('click', async (e) => {
   e.preventDefault();
 
   const editName = document.querySelector('.editName').value.trim();
