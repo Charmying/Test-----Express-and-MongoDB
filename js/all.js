@@ -119,7 +119,6 @@ updateDataButton.addEventListener('click', async (e) => {
   }
 });
 
-
 // 刪除資料
 deleteDataButton.addEventListener('click', async (e) => {
   e.preventDefault();
