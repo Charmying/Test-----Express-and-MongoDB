@@ -53,7 +53,7 @@ getDataButton.addEventListener('click', async (e) => {
   const editEmail = document.querySelector('.editEmail').value.trim();
 
   if (!editName || !editEmail) {
-    alert('請填寫名稱和Email以查詢資料。');
+    alert('請填寫名稱和 Email 以查詢資料。');
     return;
   }
 
@@ -67,7 +67,7 @@ getDataButton.addEventListener('click', async (e) => {
       currentDataId = foundEntry._id;
       actionButtons.classList.add('show');
     } else {
-      alert('查無資料或名稱 / 信箱錯誤');
+      alert('查無資料或名稱 / Email 錯誤');
       currentDataId = null;
       actionButtons.classList.remove('show');
     }
@@ -116,7 +116,7 @@ updateDataButton.addEventListener('click', async (e) => {
         alert('資料更新失敗');
       }
     } else {
-      alert('查無資料或名稱 / 信箱錯誤');
+      alert('查無資料或名稱 / Email 錯誤');
     }
   } catch (err) {
     alert('無法更新資料');
@@ -149,7 +149,7 @@ deleteDataButton.addEventListener('click', async (e) => {
         alert('刪除資料失敗');
       }
     } else {
-      alert('查無資料或名稱 / 信箱錯誤');
+      alert('查無資料或名稱 / Email 錯誤');
     }
   } catch (err) {
     alert('無法刪除資料');
