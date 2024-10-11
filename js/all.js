@@ -3,6 +3,7 @@ const editForm = document.querySelector('.editDataForm');
 const getDataButton = document.querySelector('.getData');
 const updateDataButton = document.querySelector('.updateData');
 const deleteDataButton = document.querySelector('.deleteData');
+const actionButtons = document.querySelector('.actionButtons');
 let currentDataId = null;
 
 // 新增資料
@@ -64,12 +65,15 @@ getDataButton.addEventListener('click', async (e) => {
     if (foundEntry) {
       document.querySelector('.editComment').value = foundEntry.comment;
       currentDataId = foundEntry._id;
+      actionButtons.classList.add('show');
     } else {
       alert('查無資料或名稱 / 信箱錯誤');
       currentDataId = null;
+      actionButtons.classList.remove('show');
     }
   } catch (err) {
     alert('無法獲取資料');
+    actionButtons.classList.remove('show');
     console.error('錯誤:', err);
   }
 });
@@ -107,6 +111,7 @@ updateDataButton.addEventListener('click', async (e) => {
       if (updateResponse.ok) {
         alert('資料更新成功');
         editForm.reset();
+        actionButtons.classList.remove('show');
       } else {
         alert('資料更新失敗');
       }
@@ -139,6 +144,7 @@ deleteDataButton.addEventListener('click', async (e) => {
       if (deleteResponse.ok) {
         alert('資料已成功刪除');
         editForm.reset();
+        actionButtons.classList.remove('show');
       } else {
         alert('刪除資料失敗');
       }
