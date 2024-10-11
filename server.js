@@ -65,6 +65,23 @@ app.put('/data/:id', async (req, res) => {
   }
 });
 
+// API 路由：刪除資料
+app.delete('/data/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const deletedData = await DataModel.findByIdAndDelete(id);
+
+    if (!deletedData) {
+      return res.status(404).json({ message: '資料未找到' });
+    }
+
+    res.status(200).json({ message: '資料已刪除' });
+  } catch (err) {
+    res.status(500).json({ message: '伺服器錯誤' });
+  }
+});
+
 // 提供靜態資源
 app.use(express.static(path.join(__dirname))); // 提供根目錄的靜態文件
 

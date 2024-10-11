@@ -1,5 +1,6 @@
 const addForm = document.querySelector('.addDataForm');
 const editForm = document.querySelector('.editDataForm');
+const deleteButton = document.querySelector('.deleteData');
 let currentDataId = null;
 
 // 新增資料
@@ -98,6 +99,38 @@ editForm.querySelector('.updateData').addEventListener('click', async (e) => {
     currentDataId = null;
   } catch (err) {
     alert('資料更新失敗');
+    console.error('錯誤:', err);
+  }
+});
+
+// 刪除資料
+deleteButton.addEventListener('click', async (e) => {
+  e.preventDefault();
+
+  const editName = document.querySelector('.editName').value.trim();
+  const editEmail = document.querySelector('.editEmail').value.trim();
+
+  try {
+    const response = await fetch('/data');
+    const data = await response.json();
+    const foundEntry = data.find(entry => entry.name === editName && entry.email === editEmail);
+
+    if (foundEntry) {
+      const deleteResponse = await fetch(`/data/${foundEntry._id}`, {
+        method: 'DELETE'
+      });
+
+      if (deleteResponse.ok) {
+        alert('資料已成功刪除');
+        editForm.reset();
+      } else {
+        alert('刪除資料失敗');
+      }
+    } else {
+      alert('查無資料或名稱 / 信箱錯誤');
+    }
+  } catch (err) {
+    alert('無法刪除資料');
     console.error('錯誤:', err);
   }
 });
